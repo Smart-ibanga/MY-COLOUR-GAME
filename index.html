@@ -9,15 +9,23 @@
 <body>
     <div class="container" data-testid="profileCard">
         <header>
-            <h2 class="job-title" data-testid="jobTitle">MY COLOUR GAME</h2>
+            <h1 class="job-title" data-testid="jobTitle">MY COLOUR GAME</h1>
+
+            <h3>Guess the correct color!</h3>
         </header>
+
         <nav>
             <p>Score: <span id="score" data-testid="score">0</span></p>
+
             <button id="newGameButton" data-testid="newGameButton">New Game</button>
+
+            <p id="guessResult"  data-testid="gameStatus"></p>
         </nav>
         <section>
-            <div class="targetColour"></div>
-            <div id="container">
+
+            <div id="colorBox" class="targetColor"  data-testid="colorBox"></div>
+
+            <div  class="colorOption"  id="container" data-testid="colorOption">
                 <div class="square"></div>
                 <div class="square"></div>
                 <div class="square"></div>
@@ -30,8 +38,6 @@
             <p class="current-time-utc" data-testid="currentTimeUTC"></p>
         </footer>
     </div>
-
-    
     <script src="script.js"></script>
 </body>
 </html>
