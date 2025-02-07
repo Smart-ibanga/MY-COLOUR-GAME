@@ -1,62 +1,66 @@
 /*  General Reset  */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-  }
-
-  nav{
-    display: flex;
-    justify-content: space-between;
-  }
-
-  section{
-    align-items: center;
-  }
-
-  .container{
-    position: relative;
-    text-align: center;
-    color: #fff;
-   
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: blueviolet;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  background: white;
+  padding: 40px;
+  border-radius: 50px;
+  position: relative;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+section {
+  align-items: center;
+}
+
+/* .container {
+  
+  color: #fff;
+} */
 
 .targetColor {
-    background-color: aqua;
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
-    border-radius: 15%;
-    justify-content: center;
+  background-color: aqua;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  border-radius: 15%;
+  justify-content: center;
 }
-  
+
 .square {
-	width: 30%;
-	background: purple;
-	padding-bottom: 30%;
-	float: left;
-	margin: 1.66%;
-	border-radius: 15%;
+  width: 30%;
+  background: purple;
+  padding-bottom: 30%;
+  float: left;
+  margin: 1.66%;
+  border-radius: 15%;
   border: none;
   cursor: pointer;
 
-
-	/* transition: background 0.6s;
+  /* transition: background 0.6s;
 	-webkit-transition: background 0.6s;
 	-moz-transition: background 0.6s; */
-}
-
-#container {
-	margin: 20px auto;
-	max-width: 600px;
 }
