@@ -1,6 +1,4 @@
 
-
-
 let score = 0; // Initialize score counter
 
 // Function to generate a random number between min and max (inclusive)
@@ -56,3 +54,14 @@ function assignColors() {
             feedback.style.color = 'red';
         }
     }
+
+    // Add event listener to the reset button
+    document.getElementById('newGameButton').addEventListener('click', () => {
+        score = 0; // Reset score
+        document.getElementById('score').textContent = `Score: ${score}`;
+        document.querySelector('.gameStatus').textContent = ''; // Clear feedback
+        assignColors(); // Reset colors
+    });
+
+    // Initial setup
+    assignColors();
