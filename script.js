@@ -17,7 +17,7 @@ function generateRandomColourRGB() {
 
 // Function to assign random colors to the buttons and set the correct color
 function assignColors() {
-    const colorOption = document.queryselectorAll('.square')
+    const colorOption = document.querySelector('.square');
     const correctColor = generateRandomColourRGB();
 
     // Set the colorBox to the correct color
