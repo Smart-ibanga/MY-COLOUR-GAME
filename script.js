@@ -50,7 +50,7 @@ function checkGuess(guessedColor, correctColor) {
     feedback.textContent = "Correct! You guessed the right color!";
     feedback.style.color = "green";
     score++; // Increment score
-    scoreDisplay.textContent = `Score: ${score}`;
+    scoreDisplay.textContent = score ;
     assignColors(); // Generate new colors for the next round
   } else {
     feedback.textContent = "Wrong guess! Try again.";
