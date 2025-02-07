@@ -1,6 +1,7 @@
 
-let colorOption = document.queryselectorAll('.square')
 
+
+let score = 0; // Initialize score counter
 
 // Function to generate a random number between min and max (inclusive)
 function generateRandomNumbersBetween(min, max) {
@@ -16,26 +17,14 @@ function generateRandomColourRGB() {
     return `rgb(${red}, ${green}, ${blue})`;
 }
 
-// Function to change the background color of the colorBox div
-function changeColor() {
-    const targetColor = document.querySelector('targetColor');
-    const randomColor = generateRandomColourRGB();
-    colorBox.style.backgroundColor = randomColor;
-    console.log(`Generated Color: ${randomColor}`);
-}
-
-// Initial color change on page load
-changeColor();
-
-
- // Function to assign random colors to the buttons and set the correct color
- function assignColors() {
-    const buttons = document.querySelectorAll('.colorButton');
+// Function to assign random colors to the buttons and set the correct color
+function assignColors() {
+    const colorOption = document.queryselectorAll('.square')
     const correctColor = generateRandomColourRGB();
 
     // Set the colorBox to the correct color
-    const colorBox = document.getElementById('colorBox');
-    colorBox.style.backgroundColor = correctColor;
+    const targetColor = document.querySelector('targetColor');
+    targetColor.style.backgroundColor = correctColor;
 
     // Assign the correct color to one random button
     const correctButtonIndex = generateRandomNumbersBetween(0, buttons.length - 1);
@@ -49,3 +38,21 @@ changeColor();
         button.addEventListener('click', () => checkGuess(button.style.backgroundColor, correctColor));
     });
 }
+
+
+      // Function to check if the guessed color is correct
+      function checkGuess(guessedColor, correctColor) {
+        const feedback = document.querySelector('gameStatus');
+        const scoreDisplay = document.getElementById('score');
+
+        if (guessedColor === correctColor) {
+            feedback.textContent = 'Correct! You guessed the right color!';
+            feedback.style.color = 'green';
+            score++; // Increment score
+            scoreDisplay.textContent = `Score: ${score}`;
+            assignColors(); // Generate new colors for the next round
+        } else {
+            feedback.textContent = 'Wrong guess! Try again.';
+            feedback.style.color = 'red';
+        }
+    }
