@@ -23,7 +23,7 @@ function assignColors() {
     const correctColor = generateRandomColourRGB();
 
     // Set the colorBox to the correct color
-    const targetColor = document.querySelector('targetColor');
+    const targetColor = document.querySelector('.targetColor');
     targetColor.style.backgroundColor = correctColor;
 
     // Assign the correct color to one random button
@@ -42,7 +42,7 @@ function assignColors() {
 
       // Function to check if the guessed color is correct
       function checkGuess(guessedColor, correctColor) {
-        const feedback = document.querySelector('gameStatus');
+        const feedback = document.querySelector('.gameStatus');
         const scoreDisplay = document.getElementById('score');
 
         if (guessedColor === correctColor) {
