@@ -2,7 +2,6 @@
 let colorOption = document.queryselectorAll('.square')
 
 
-
 // Function to generate a random number between min and max (inclusive)
 function generateRandomNumbersBetween(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
